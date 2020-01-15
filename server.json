@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lucas Barros",
+      "uri": "https://scontent.ffor8-2.fna.fbcdn.net/v/t1.0-9/p960x960/67572121_2095729624065836_7227121578985652224_o.jpg?_nc_cat=105&_nc_ohc=xi3wuyhFSfQAQlatSBYm9M6N1cmPw_wWDbtfDgsXP1PveswMl1qa4elEQ&_nc_ht=scontent.ffor8-2.fna&_nc_tp=1&oh=61f64759eeed5df794e6e4801efe74b0&oe=5ED6B8F5",
+      "age": 25,
+      "address": "Dom Avelar, Petrolina Pe"
+    },
+    {
+      "id": 2,
+      "name": "Victória Fernandes",
+      "age": 20,
+      "uri": "https://scontent.ffor8-2.fna.fbcdn.net/v/t1.0-9/p960x960/67292063_707271289714376_2575709539726786560_o.jpg?_nc_cat=106&_nc_ohc=9SZ95bXB9JoAQlf3hTXl2op6v-OffaiU4X0ZWc7RzR9-VWXFzti344opw&_nc_ht=scontent.ffor8-2.fna&_nc_tp=1&oh=ccac3711f1a148a08726fc1062db4f9e&oe=5E9C07DB",
+      "address": "Dom Avelar, Petrolina Pe"
+    }
+  ],
+  "pets": [
+    {
+      "id": 3,
+      "name": "Aurora",
+      "age": 1,
+      "userId": 1,
+      "location": "Dom Avelar, Petrolina",
+      "type": "cat",
+      "description": "Lost cat in Dom Avelar, Petrolina. We didn't find her at night, 45 days ago. She's young, called Aurora and we love her. Please, help us to find my little cat.",
+      "uri": "https://scontent.fpnz1-1.fna.fbcdn.net/v/t1.0-9/74424796_797826797325491_2666025026855108608_n.jpg?_nc_cat=111&_nc_ohc=ClJz234vUWgAX9UN5nm&_nc_ht=scontent.fpnz1-1.fna&oh=5a6b4a6da1ed070ce0e3667f10520146&oe=5EA763A7"
+    },
+    {
+      "id": 4,
+      "name": "Mimi",
+      "age": 4,
+      "userId": 2,
+      "location": "Pedro Baiano, Petrolina",
+      "type": "cat",
+      "description": "My gradmother lost her cat one year ago, but we don't stop to looking for that cat.",
+      "uri": "https://www.sciencealert.com/images/2019-12/processed/CatsHaveFacialExpressionsButHardToRead_600.jpg"
+    }
+  ]
+}
