@@ -41,7 +41,9 @@ export const Loading = styled.ActivityIndicator.attrs({
 
 export const Location = styled.Text`
   padding-left: 15px;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: -20px;
+  margin-bottom: 10px;
 `;
 
 export const IconLocation = styled.Image`

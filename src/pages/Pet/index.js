@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { FlatList } from 'react-native';
 
-import { Card, Buttons, Photo, Avatar, Name, Description, Label, User, Comments, Comment, PetName, CommentUser, CommentPhoto, CommentText, CommentField, CommentPart, SendCommentButton } from './styles';
+import { Card, Loading, Buttons, Photo, Avatar, Name, Description, Label, User, Comments, Comment, PetName, CommentUser, CommentPhoto, CommentText, CommentField, CommentPart, SendCommentButton } from './styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Button } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default function PetPage({ navigation }) {
   const [pet, setPet] = useState({});
+  const [loading, setLoading] = useState(true);
+
   const petId = navigation.getParam('_id');
 
   const loadPage = async () => {
@@ -17,6 +19,7 @@ export default function PetPage({ navigation }) {
 
     const data = await response.json();
     setPet(data);
+    setLoading(false);
   };
 
   const register = async () => {
@@ -29,7 +32,8 @@ export default function PetPage({ navigation }) {
 
   return (
     <ScrollView>
-      <Card>
+      <Loading visibility={loading} />
+      <Card visibility={!loading}>
         <Photo source={{ uri: pet.uri }} ratio={1} />
         <Buttons>
           <PetName>{pet.name}, {pet.age} {pet.age > 1 ? 'years.' : 'year.'}</PetName>
@@ -63,6 +67,7 @@ export default function PetPage({ navigation }) {
           <FlatList
             data={pet.comments}
             keyExtrator={(item, index) => item.toString()}
+            ListFooterComponent={loading && <Loading />}
             renderItem={({ item }) => (
               <Comment>
                 <CommentPhoto source={{ uri: item.uri }} /><CommentUser>{item.name}:</CommentUser>

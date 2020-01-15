@@ -9,6 +9,7 @@ export const Header = styled.View`
 export const Card = styled.View`
   height: 100%;
   background-color: #eee;
+  display: ${props => props.visibility ? 'flex' : 'none'};
 `;
 
 export const Photo = styled.Image`
@@ -58,6 +59,7 @@ export const Loading = styled.ActivityIndicator.attrs({
   color: '#999',
 })`
   margin: 30px 0;
+  display: ${props => props.visibility ? 'flex' : 'none'};
 `;
 
 export const Buttons = styled.View`
@@ -124,6 +126,7 @@ export const CommentPhoto = styled.Image`
 
 export const CommentPart = styled.View`
   flex-direction: row;
+  bottom: 0px;
 `;
 
 export const CommentField = styled.TextInput`
@@ -134,3 +137,4 @@ export const CommentField = styled.TextInput`
   font-size: 14px;
   padding-left: 20px;
 `;
+

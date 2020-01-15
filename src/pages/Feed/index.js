@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, FlatList, TouchableOpacity } from 'react-native';
 
-import { Post, Header, Avatar, Name, PostImage, Description, Loading, Location, IconLocation } from './styles';
-import locationIcon from '../../assets/location-logo.png';
+import { Post, Header, Avatar, Name, PostImage, Description, Loading, Location } from './styles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function Feed({ navigation }) {
   const [feed, setFeed] = useState([]);
@@ -55,7 +55,7 @@ export default function Feed({ navigation }) {
               <Avatar source={{ uri: item.user.uri }} />
               <Name>{item.user.name}</Name>
             </Header>
-            <IconLocation source={locationIcon} /><Location> Está em {item.location}</Location>
+            <Icon name="map-marker-radius" size={25} color="#999" /><Location> Está em {item.location}</Location>
             <TouchableOpacity onPress={() => { navigation.navigate('Pet', { _id: item.id }) }}><PostImage ratio={1} source={{ uri: item.uri }} /></TouchableOpacity>
             <Description>
               <Name>{item.name}</Name> {item.description}
