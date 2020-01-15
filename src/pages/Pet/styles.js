@@ -94,11 +94,43 @@ export const PetName = styled.Text`
 `;
 
 export const Comments = styled.View`
-
-
+  margin-top: 20px;
 `;
 
 export const Comment = styled.View`
+  flex-direction: row;
+  padding: 15px;
+`;
 
+export const CommentUser = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10px;
+`;
 
+export const CommentText = styled.Text`
+  font-size: 14px;
+  width: 60%;
+  text-align: justify;
+`;
+
+export const CommentPhoto = styled.Image`
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 12px;
+  margin-top: -8px;
+`;
+
+export const CommentPart = styled.View`
+  flex-direction: row;
+`;
+
+export const CommentField = styled.TextInput`
+  height: 40px;
+  background-color: rgba(0, 0, 0 ,0.15);
+  width: 100%;
+  color: black;
+  font-size: 14px;
+  padding-left: 20px;
 `;
